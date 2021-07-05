@@ -19,11 +19,13 @@ addLayer("c", {
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
-        return new Decimal(1)
+        exp = new Decimal(1)
+        if (hasUpgrade('c', 12)) exp = exp.times(2)
+        return exp
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "c", description: "c: Reset for cum points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "c", description: "c: Reset for cums", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     upgrades: {
         11: {
