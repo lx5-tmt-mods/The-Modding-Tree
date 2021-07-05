@@ -28,7 +28,7 @@ addLayer("c", {
     ],
     upgrades: {
         11: {
-            name: "Upgrade 1",
+            name: "Upgrade 1.",
             description: "Double your point gain.",
             cost: new Decimal(2),        
         }
