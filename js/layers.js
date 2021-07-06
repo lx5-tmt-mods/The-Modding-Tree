@@ -23,7 +23,7 @@ addLayer("s", {
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "s", description: "f: Reset for sound", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "s", description: "s: Reset for sound", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     upgrades: {
         11: {
