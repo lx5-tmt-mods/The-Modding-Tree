@@ -33,7 +33,7 @@ addLayer("s", {
         },
         12: {
             name: "2",
-            description: "^2 your gain",
+            description: "increase your gain based on sound wawes",
             cost: new Decimal(5),
             effect() {
                 return player[this.layer].points.add(1).pow(0.5)
