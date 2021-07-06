@@ -1,6 +1,6 @@
-addLayer("f", {
-    name: "Fine guys", // This is optional, only used in a few places, If absent it just uses the layer id.
-    symbol: "F", // This appears on the layer's node. Default is the id with the first letter capitalized
+addLayer("s", {
+    name: "Sound", // This is optional, only used in a few places, If absent it just uses the layer id.
+    symbol: "S", // This appears on the layer's node. Default is the id with the first letter capitalized
     position: 0, // Horizontal position within a row. By default it uses the layer id and sorts in alphabetical order
     startData() { return {
         unlocked: true,
@@ -8,8 +8,8 @@ addLayer("f", {
     }},
     color: "#4BDC13",
     requires: new Decimal(5), // Can be a function that takes requirement increases into account
-    resource: "fine guys", // Name of prestige currency
-    baseResource: "guys", // Name of resource prestige is based on
+    resource: "sound", // Name of prestige currency
+    baseResource: "wawes", // Name of resource prestige is based on
     baseAmount() {return player.points}, // Get the current amount of baseResource
     type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
     exponent: 0.5, // Prestige currency exponent
@@ -23,7 +23,7 @@ addLayer("f", {
     },
     row: 0, // Row the layer is in on the tree (0 is the first row)
     hotkeys: [
-        {key: "f", description: "f: Reset for fine guys", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+        {key: "s", description: "f: Reset for sound", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
     ],
     upgrades: {
         11: {
