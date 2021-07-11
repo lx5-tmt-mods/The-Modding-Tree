@@ -16,6 +16,7 @@ addLayer("s", {
     
     gainMult() { // Calculate the multiplier for main currency from bonuses
         mult = new Decimal(1)
+        if (hasUpgrade('c', 13)) mult = mult.times(upgradeEffect('c', 13))
         return mult
     },
     gainExp() { // Calculate the exponent on main currency from bonuses
@@ -27,19 +28,27 @@ addLayer("s", {
     ],
     upgrades: {
         11: {
-            name: "Upgrade 1.",
-            description: "Double your point gain.",
+            name: "1",
+            description: "1: Double your point gain.",
             cost: new Decimal(1),        
         },
         12: {
             name: "2",
-            description: "increase your gain based on sound wawes",
+            description: "2: increase your gain based on sound wawes",
             cost: new Decimal(2),
             effect() {
                 return player[this.layer].points.add(1).pow(0.5)
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
         
+        },
+        13: {
+            name: "3",
+            description: "3: ???",
+            cost: new Decimal(5),
+            effect() {
+                return player.points.add(1).pow(0.15)
+            },
         }
     },
 
