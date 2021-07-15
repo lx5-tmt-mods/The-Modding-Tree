@@ -49,6 +49,11 @@ addLayer("s", {
             effect() {
                 return player.points.add(1).pow(0.15)
             },
+        14: {
+            name: "4",
+            description: "Square wave gain",
+            cost: new Decimal(10)
+        }
         }
     },
 
