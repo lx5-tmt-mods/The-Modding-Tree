@@ -31,7 +31,7 @@ addLayer("s", {
             name: "1",
             description: "1: Double your point gain.",
             cost: new Decimal(1),        
-        },
+            },
         12: {
             name: "2",
             description: "2: increase your gain based on sound wawes",
@@ -41,7 +41,7 @@ addLayer("s", {
             },
             effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
         
-        },
+            },
         13: {
             name: "3",
             description: "3: ???",
@@ -53,7 +53,7 @@ addLayer("s", {
             name: "4",
             description: "Square wave gain",
             cost: new Decimal(10),
-        },
+            },
         }
     },
 
