@@ -52,8 +52,8 @@ addLayer("s", {
         14: {
             name: "4",
             description: "Square wave gain",
-            cost: new Decimal(10)
-        }
+            cost: new Decimal(10),
+        },
         }
     },
 
