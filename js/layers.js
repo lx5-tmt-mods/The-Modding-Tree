@@ -44,7 +44,7 @@ addLayer("s", {
             },
         13: {
             name: "3",
-            description: "3: ???",
+            description: "3: Decrease sound cost based on wawes",
             cost: new Decimal(5),
             effect() {
                 return player.points.add(1).pow(0.15)
